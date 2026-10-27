@@ -1,0 +1,105 @@
+site_name: MOSFIRE
+site_description: Public documentation for the MOSFIRE instrument at the W. M. Keck Observatory.
+site_author: Josh Walawender
+repo_url: https://github.com/KeckObservatory/MOSFIRE-Web-Page/
+repo_name: MOSFIRE-Web-Page
+edit_uri: ''
+
+remote_branch: gh-pages
+
+theme:
+  name: readthedocs
+  titles_only: true
+
+plugins:
+- search
+
+nav:
+  - "MOSFIRE Home": index.md
+  - "MOSFIRE Info":
+    - "MOSFIRE News/Status": status.md
+    - "Specifications":
+      - "Filters": filters.md
+      - "Grating": grating.md
+      - "Detector": detector.md
+      - "Persistence": persistence.md
+      - "Guider": guider.md
+    - "Sensitivity":
+      - "Imaging Zero Points": zeropoints.md
+      - "Spectroscopic Throughput": throughput.md
+      - "Sky Line Flux": skylineflux.md
+      - "Wavelength Calibration": wavelengthcal.md
+      - "Spectrophotometric Observing": specphot.md
+  - "Planning":
+    - "Exposure Time Calculator": etc.md
+    - "Exposure Recommendations": exposurerecipes.md
+    - "Mask Design: MAGMA": magma.md
+    - "Mask Design: Strategies": maskdesign.md
+    - "Dither Patterns": ditherpatterns.md
+    - "Position Angles": positionangles.md
+    - "IR Photometric Standards": standards.md
+    - "Gemini Telluric Standards": http://www.gemini.edu/sciops/instruments/nearir-resources?q=node/10175
+  - "Observing with MOSFIRE":
+    - "Afternoon Setup": afternoon.md
+    - "Calibration Recipes": calrecipes.md
+    - "Evening Startup": evening.md
+    - "Observing Quick Guide": quickguide.md
+    - "Observing Workflow": workflow.md
+    - "Mask Alignment":
+      - "Slitmask Alignment": maskalignment.md
+      - "Long Slit Alignment": longslitalignment.md
+      - "Bright/Long Alignment": brightlong.md
+    - "Long2pos Observing": long2pos.md
+    - "Spectrophotometric Observations": spectrophot.md
+    - "Aborting": aborting.md
+  - "General Observing Info": 
+    - "Weather":
+      - "MK Weather Center": http://mkwc.ifa.hawaii.edu/forecast/mko/index.cgi
+      - "Keck Cloud Cameras": https://www3.keck.hawaii.edu/skycams/CloudCamTimelapse.html
+    - "Useful Keck Pages":
+      - "Telescope Schedule": https://www2.keck.hawaii.edu/observing/keckSchedule/keckSchedule.php
+      - "Target List Format": https://www.keck.hawaii.edu/realpublic/inst/common/starlist.html
+      - "Keck Instruments": http://www2.keck.hawaii.edu/inst/
+      - "Observer Login Page": https://www3.keck.hawaii.edu/login/
+      - "Planning Tool": https://www2.keck.hawaii.edu/software/obsplan/obsplan.php
+      - "Twilight, Moon rise, etc.": https://ucolick.org/calendar/keckcal2021-30/index.html
+      - "Offset & PA Calculator": https://www2.keck.hawaii.edu/inst/common/offset.php
+      - "General Keck Observing Info": https://www.keckobservatory.org/observing/
+      - "Pre-observing Checklist": https://www.keck.hawaii.edu/realpublic/inst/kpf/pre-observing_checklist.html
+      - "Remote Observing": http://www2.keck.hawaii.edu/inst/common/mainland_observing.html
+      - "Telescope Limits": https://www2.keck.hawaii.edu/inst/common/TelLimits.html
+      - "Telescope Info": http://www2.keck.hawaii.edu/observing/kecktelgde/ktelinstupdate.pdf
+    - "Keck Policies":
+      - "ToO Interrupts": https://www2.keck.hawaii.edu/inst/common/too_policies.html
+      - "Split Nights": http://www2.keck.hawaii.edu/observing/SplitNights.html
+      - "Remote Observing": http://www2.keck.hawaii.edu/inst/common/mainland_observing.html
+      - "Other Policies": http://www2.keck.hawaii.edu/observing/policies.html
+  - "After Your Observing Run":
+    - "Post-observing Comment Form": https://www2.keck.hawaii.edu/inst/PILogin/login.php
+    - "Retrieve Your Data":
+      - "Retrieving Data in Real Time": https://koa.ipac.caltech.edu/rti-gui/login
+      - "Retrieve Data from KOA": https://koa.ipac.caltech.edu/
+      - "Retrieve Data using PyKOA": https://koa.ipac.caltech.edu/UserGuide/PyKOA/TAPClients.html#pykoa
+      - "Data Proprietary Period": http://www2.keck.hawaii.edu/realpublic/koa/public/KOA_data_policy.pdf
+    - "Data Reduction":
+        - "PypeIt": https://pypeit.readthedocs.io/en/stable/spectrographs/mosfire.html
+        - "MOSFIRE DRP (not supported)": https://keck-datareductionpipelines.github.io/MosfireDRP/
+        - "IRAF & MOSDIFF": mosdiff.md
+    - "Acknowledging Keck": https://www2.keck.hawaii.edu/observing/keck_authors.html
+    - "Acknowledging MOSFIRE": references.md
+  - "Technical Documentation":
+    - "Troubleshooting": troubleshooting.md
+    - "Pre-run Checkout": checkout.md
+    - "Detector Logging": detectorlogging.md
+    - "Dark Filters": darkfilters.md
+    - "Wavelength Calibration": wavelengthcalibration.md
+    - "Keywords": keywords.md
+    - "2016/2017 Repair Mission": repair2016.md
+
+# Move to Confluence
+# - https://www.keck.hawaii.edu/realpublic/inst/mosfire/tech_pages/csu_test_setup.html
+# - https://www.keck.hawaii.edu/realpublic/inst/mosfire/tech_pages/cal_tool_command_line.html
+# - https://www.keck.hawaii.edu/realpublic/inst/mosfire/tech_pages/disk_swap.html
+# - https://www.keck.hawaii.edu/realpublic/inst/mosfire/tech_pages/MOSFIRE_Augmentix_Control_disk_cloning.docx
+# - https://www.keck.hawaii.edu/realpublic/inst/mosfire/tech_pages/docs/Guider_Distortion_correction.pdf
+# - https://www.keck.hawaii.edu/realpublic/inst/mosfire/tech_pages/callamp_replace.html
