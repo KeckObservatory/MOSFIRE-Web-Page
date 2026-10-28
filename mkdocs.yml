@@ -37,8 +37,9 @@ nav:
     - "Mask Design: Strategies": maskdesign.md
     - "Dither Patterns": ditherpatterns.md
     - "Position Angles": positionangles.md
-    - "IR Photometric Standards": standards.md
-    - "Gemini Telluric Standards": http://www.gemini.edu/sciops/instruments/nearir-resources?q=node/10175
+    - "Standard Stars":
+      - "IR Photometric Standards": standards.md
+      - "Gemini Telluric Standards": http://www.gemini.edu/sciops/instruments/nearir-resources?q=node/10175
   - "Observing with MOSFIRE":
     - "Afternoon Setup": afternoon.md
     - "Calibration Recipes": calrecipes.md
@@ -81,7 +82,7 @@ nav:
       - "Retrieve Data from KOA": https://koa.ipac.caltech.edu/
       - "Retrieve Data using PyKOA": https://koa.ipac.caltech.edu/UserGuide/PyKOA/TAPClients.html#pykoa
       - "Data Proprietary Period": http://www2.keck.hawaii.edu/realpublic/koa/public/KOA_data_policy.pdf
-    - "Data Reduction":
+    - "MOSFIRE Data Reduction":
         - "PypeIt": https://pypeit.readthedocs.io/en/stable/spectrographs/mosfire.html
         - "MOSFIRE DRP (not supported)": https://keck-datareductionpipelines.github.io/MosfireDRP/
         - "IRAF & MOSDIFF": mosdiff.md
