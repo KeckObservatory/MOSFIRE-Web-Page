@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Josh Walawender" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Filters - MOSFIRE</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Filters";
+        var mkdocs_page_input_path = "filters.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MOSFIRE
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">MOSFIRE Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MOSFIRE Info</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../news/">MOSFIRE News</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Specifications</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Filters</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../grating.md">Grating</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../detector.md">Detector</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../persistence.md">Persistence</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../guider.md">Guider</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Sensitivity</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="../zeropoints.md">Imaging Zero Points</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../throughput.md">Spectroscopic Throughput</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../skylineflux.md">Sky Line Flux</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../wavelengthcal.md">Wavelength Calibration</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../specphot.md">Spectrophotometric Observing</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Planning</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../etc.md">Exposure Time Calculator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../exposurerecipes.md">Exposure Recommendations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../magma.md">Mask Design: MAGMA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../maskdesign.md">Mask Design: Strategies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../ditherpatterns.md">Dither Patterns</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../positionangles.md">Position Angles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Standard Stars</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="../standards.md">IR Photometric Standards</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="http://www.gemini.edu/sciops/instruments/nearir-resources?q=node/10175">Gemini Telluric Standards</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Observing with MOSFIRE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../afternoon.md">Afternoon Setup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../calrecipes.md">Calibration Recipes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../evening.md">Evening Startup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../quickguide.md">Observing Quick Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../workflow.md">Observing Workflow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Mask Alignment</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="../maskalignment.md">Slitmask Alignment</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../longslitalignment.md">Long Slit Alignment</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../brightlong.md">Bright/Long Alignment</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../long2pos.md">Long2pos Observing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../spectrophot.md">Spectrophotometric Observations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../aborting.md">Aborting</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">General Observing Info</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Weather</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="http://mkwc.ifa.hawaii.edu/forecast/mko/index.cgi">MK Weather Center</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://www3.keck.hawaii.edu/skycams/CloudCamTimelapse.html">Keck Cloud Cameras</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Useful Keck Pages</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="https://www2.keck.hawaii.edu/observing/keckSchedule/keckSchedule.php">Telescope Schedule</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://www.keck.hawaii.edu/realpublic/inst/common/starlist.html">Target List Format</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="http://www2.keck.hawaii.edu/inst/">Keck Instruments</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://www3.keck.hawaii.edu/login/">Observer Login Page</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://www2.keck.hawaii.edu/software/obsplan/obsplan.php">Planning Tool</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://ucolick.org/calendar/keckcal2021-30/index.html">Twilight, Moon rise, etc.</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://www2.keck.hawaii.edu/inst/common/offset.php">Offset & PA Calculator</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://www.keckobservatory.org/observing/">General Keck Observing Info</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://www.keck.hawaii.edu/realpublic/inst/kpf/pre-observing_checklist.html">Pre-observing Checklist</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="http://www2.keck.hawaii.edu/inst/common/mainland_observing.html">Remote Observing</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://www2.keck.hawaii.edu/inst/common/TelLimits.html">Telescope Limits</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="http://www2.keck.hawaii.edu/observing/kecktelgde/ktelinstupdate.pdf">Telescope Info</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Keck Policies</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="https://www2.keck.hawaii.edu/inst/common/too_policies.html">ToO Interrupts</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="http://www2.keck.hawaii.edu/observing/SplitNights.html">Split Nights</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="http://www2.keck.hawaii.edu/inst/common/mainland_observing.html">Remote Observing</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="http://www2.keck.hawaii.edu/observing/policies.html">Other Policies</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">After Your Observing Run</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="https://www2.keck.hawaii.edu/inst/PILogin/login.php">Post-observing Comment Form</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Retrieve Your Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="https://koa.ipac.caltech.edu/rti-gui/login">Retrieving Data in Real Time</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://koa.ipac.caltech.edu/">Retrieve Data from KOA</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://koa.ipac.caltech.edu/UserGuide/PyKOA/TAPClients.html#pykoa">Retrieve Data using PyKOA</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="http://www2.keck.hawaii.edu/realpublic/koa/public/KOA_data_policy.pdf">Data Proprietary Period</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >MOSFIRE Data Reduction</a>
+    <ul>
+                <li class="toctree-l2"><a class="" href="https://pypeit.readthedocs.io/en/stable/spectrographs/mosfire.html">PypeIt (spectroscopy)</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://github.com/CIERA-Transients/POTPyRI">POTPyRI (imaging)</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="https://keck-datareductionpipelines.github.io/MosfireDRP/">MOSFIRE DRP (not supported)</a>
+                </li>
+                <li class="toctree-l2"><a class="" href="../mosdiff.md">IRAF & MOSDIFF</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://www2.keck.hawaii.edu/observing/keck_authors.html">Acknowledging Keck</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../references.md">Acknowledging MOSFIRE</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Technical Documentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../troubleshooting.md">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../checkout.md">Pre-run Checkout</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../detectorlogging.md">Detector Logging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../darkfilters.md">Dark Filters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../wavelengthcalibration.md">Wavelength Calibration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../keywords.md">Keywords</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../repair2016.md">2016/2017 Repair Mission</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MOSFIRE</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">MOSFIRE Info</li>
+          <li class="breadcrumb-item">Specifications</li>
+      <li class="breadcrumb-item active">Filters</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="filters">Filters</h1>
+<p>s## Order Sorting Filters</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Transmission Curve</th>
+<th>&lambda;<sub>C</sub> (&mu;m)</th>
+<th>FWHM (&mu;m)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Y</td>
+<td><a href="../figures/Y_band.jpg">Plot</a>, <a href="../figures/mosfire_Y.txt">ASCII</a></td>
+<td>1.048</td>
+<td>0.152</td>
+<td></td>
+</tr>
+<tr>
+<td>J</td>
+<td><a href="../figures/J_band.jpg">Plot</a>, <a href="../figures/mosfire_J.txt">ASCII</a></td>
+<td>1.253</td>
+<td>0.200</td>
+<td>J2 covers a region that J does not.</td>
+</tr>
+<tr>
+<td>H</td>
+<td><a href="../figures/H_band.jpg">Plot</a>, <a href="../figures/mosfire_Y.txt">ASCII</a></td>
+<td>1.637</td>
+<td>0.341</td>
+<td></td>
+</tr>
+<tr>
+<td>K</td>
+<td><a href="../figures/K_band.jpg">Plot</a>, <a href="../figures/mosfire_Y.txt">ASCII</a></td>
+<td>2.162</td>
+<td>0.483</td>
+<td>Not intended for imaging</td>
+</tr>
+<tr>
+<td>Ks</td>
+<td><a href="../figures/Ks_band.jpg">Plot</a>, <a href="../figures/mosfire_Y.txt">ASCII</a></td>
+<td>2.147</td>
+<td>0.314</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="intermediate-band-filters">Intermediate Band Filters</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Transmission Curve</th>
+<th>&lambda;<sub>C</sub> (&mu;m)</th>
+<th>FWHM (&mu;m)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J2</td>
+<td><a href="../figures/J2.jpg">Plot</a>, <a href="../figures/J2_center_corr.txt">ASCII</a></td>
+<td>1.181</td>
+<td>0.129</td>
+<td></td>
+</tr>
+<tr>
+<td>J3</td>
+<td><a href="../figures/J3.jpg">Plot</a>, <a href="../figures/J3_center_corr.txt">ASCII</a></td>
+<td>1.288</td>
+<td>0.122</td>
+<td></td>
+</tr>
+<tr>
+<td>H1</td>
+<td><a href="../figures/H1.jpg">Plot</a>, <a href="../figures/H1_center_corr.txt">ASCII</a></td>
+<td>1.556</td>
+<td>0.165</td>
+<td></td>
+</tr>
+<tr>
+<td>H2</td>
+<td><a href="../figures/H2.jpg">Plot</a>, <a href="../figures/H2_center_corr.txt">ASCII</a></td>
+<td>1.709</td>
+<td>0.167</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="broadband-filter-curves">Broadband Filter Curves</h2>
+<p><img alt="Broadband Filter Curves" src="../figures/filters_broadband.jpg" /></p>
+<blockquote>
+<p>Image showing the broadband filter curves.</p>
+</blockquote>
+<p><img alt="&lt;# alt text #&gt;" src="../figures/JHmed.jpg" title="JHmed.jpg" /></p>
+<blockquote>
+<p>Image showing the transmission curves of the J2,J3,H1, &amp; H2 filters relative to the order sorting filters. </p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../news/" class="btn btn-neutral float-left" title="MOSFIRE News"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/KeckObservatory/MOSFIRE-Web-Page/" class="fa fa-code-fork" style="color: #fcfcfc"> MOSFIRE-Web-Page</a>
+        </span>
+    
+    
+      <span><a href="../news/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
