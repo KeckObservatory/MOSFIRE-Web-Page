@@ -1,0 +1,515 @@
+<dt><br><b>DVD writer no longer available for data backups</b> (2016-Jan-26)</dt>
+
+The Keck Observatory is phasing out the auto DVD writer
+sometimes used by observers for data backups. Options to
+launch the DVD autobackup gui are no longer available from
+the background menu. Because the
+Keck Observatory Archive (KOA) now ingests all raw data from every
+instrument at the observatory, observers are encouraged to use KOA to retrieve
+a copy of the data following your observing
+sessions. Instructions and links to possible methods of data
+backup including KOA, scp, and rsync are found at:
+<a href="http://www2.keck.hawaii.edu/inst/common/BackingUp.html">BackingUp</a>.
+
+<dt><br><b><a name="news7">DRP updated</b> (2015-Aug-3)</dt>
+
+An updated version of the MOSFIRE DRP is released for observer
+use. For details please see
+<a href="https://keck-datareductionpipelines.github.io/MosfireDRP/">
+https://keck-datareductionpipelines.github.io/MosfireDRP/</a>.
+<p> This release provides a number of new capabilities and
+improvements as well as bug fixes. It is also highly enhances the
+automation of the reduction process. Among the new pipeline
+capabilities are: 
+<ol>
+    <li> Automatic generation of the driver file
+    <li> Reduction of longslit observations
+    <li>reduction of long2pos and long2pos_specphot
+    <li>detailed log file and log output
+    <li>K-sigma clipping during wavelength fitting
+    <li>A bypass mode to autofit for a wavelength solution
+    <li>Package installation similar to the ureka package
+    <li>support for Numpy 1.9 
+</ol>
+
+
+<dt><br><b><a name="news7">MOSFIRE Drift corrected</b> (2015-Apr-29)</dt>
+
+ MOSFIRE observers  detected that objects drifted 
+along the slit over time. With the help of the MOSDEF team
+and Dr. Chuck Steidel, we determined that the observed drift was
+due to flexure in the guiding system and differential
+atmospheric refraction. 
+
+<p> Software updates were applied to both MOSFIRE and MAGIQ (the
+guider). MAGIQ now corrects for the flexure in the system by
+adjusting the guide star slightly as the instrument rotates and
+the telescope changes elevation. MOSFIRE software now provides
+MAGIQ with values for the filter central wavelength and ensures
+that MAGIQ DAR corrections are enabled.
+
+<p> On sky testing during two nights appeared to show that
+objects appear to remain in the same location with their
+assigned slits. FITS headers will also indicate whether DAR is
+enabled and the central wavelength used for correction.
+
+  <dt><br><b><a name="news6">Telescope Offset Problem fixed </b>
+(2014-Dec-15)
+
+   We have addressed a long standing observatory wide problem
+  where commands to offset or nod the telescope were lost in
+  the command queries to the telescope. In the past, the
+  telescope would occasionally not nod to the desired
+  location, resulting in two consecutive spectra with the objects at
+  exactly the same location spatially in the slit. So a nod
+  sequence may look like this: A,B,A,B,A,B,B,C,B,C,B,C.
+      
+<p> To solve this problem we implemented a gateway keyword
+server. This is relatively transparent to observers. Most
+importantly, since installing the gateway server in July 2014,
+we no longer observe a skipped telescope offset. All nod
+command work as expected. This solution was deployed to all
+instruments at the observatory.
+
+    <p> This issue was initially reported in April 2014 and was a
+    problem for all observations until the 2014B semester.
+
+  <dt><br><b><a name="news5">MOSFIRE DRP now supported by Keck</b>
+(2014-Dec-15)
+
+   The MOSFIRE DRP is now being served and maintained by the
+  Keck Observatory. With this change there are some minor updates
+  in the latest release which should be transparent to DRP
+  users. A new issue tracking system is also implemented to help
+  us better track issues, questions, and concerns. Please see 
+  <a href="https://mosfire-datareductionpipeline.github.io/MosfireDRP/">
+   https://mosfire-datareductionpipeline.github.io/MosfireDRP/ </a>.
+
+  <dt><br><b><a name="news4">Drift in spectroscopic exposures</b>
+(2014-May-15)
+
+   Observers are noticing a 1 pixel/hour drift along the slit
+  while acquiring spectroscopic observations with MOSFIRE. The
+  graph below shows the steady motion of a slit star in a mask
+  observed by the MOSDEF team. Over a two hour observing
+  sequence using a 4 point slit dither pattern, the star
+  drifted by 2 pixels. 
+
+<p><img src="./images/mosfire_drift.jpg">
+      
+<p> Working with Dr. Richard Ellis, Matt Schenker was the first
+    to report the drift which was later confirmed by members
+    of the MOSDEF team, Dr. Mariska Kriek in particular. 
+
+    <p> The drift does not appear to be present in all
+    spectroscopic observations as some observations show a
+    maximum drift of 1 pix per hour while other observations
+    indicate that the star was stationary in the slit. We are
+    currently investigating if the drift is correlated with
+    telescope parameters such as elevations, azimuth, rotator
+    position angle (physical drive angle), etc. We have
+    exonerated the guiding software during engineering
+    completed in mid-May.
+
+    <p> The MOSDEF team and Dr. Ellis's observing group monitor
+    the drift by designing their mask with a suitably bright
+    enough star that may be detected in a single nod pair of
+    observations. The star is bright enough that the teams can
+    monitor the position and intensity of the star. Keck
+    observatory suggests that observers who are concerned
+    about slit drift include a relatively bright star
+    comparable to those used for alignment (15-19 mag) in the
+    science mask configuration. The magnitude of the star will
+    depend on the length of individual exposures.
+
+    <p> We are in the process of also porting over software used
+    by the teams to help monitor the position of the star in
+    real time so that observers may determine if a re-alignment is
+    necessary. 
+ 
+
+   
+
+
+  <dt><br><b>Telescope Offset Monitoring software released</b>
+(2014-Apr-14)
+
+   On occasion during a spectroscopic nod sequence, the
+  telescope does not nod to the desired location. This will
+  often result in two consecutive spectra with the objects at
+  exactly the same location spatially in the slit. We have
+  recently released software that monitors the requested
+  positions and confirms telescope motion. If a move is
+  suspected of not executing, TKlogger, will pop up a message
+  on your display screen suggesting a course of action.
+
+      <p> The typical course of action is to abort the dither
+    sequence and then restart the sequence. However, the
+    software is in its infancy. It is in the observer's best
+    interested to confirm that the telescope did not move by
+    examining the last image and the current image to asses if
+    the targets offset as expected or are at the same location
+    spatially in the slit. Please talk to your SA, if you have
+    questions.
+
+
+  <dt><br><b>DVD writer for data backups will be phased out</b>
+(2014-Mar-7)
+
+  The Keck Observatory is phasing out the auto DVD writer
+  sometimes used by observers for data backups. Although there
+  is no time line for the removal of the DVD writer, we will no
+  longer troubleshoot or maintain the DVD writer. Because the
+  Keck Observatory Archive (KOA) now ingests all raw data from every
+  instrument at the observatory, observers are encouraged to use KOA to retrieve
+  a copy of the data following your observing
+  sessions. Instructions and links to possible methods of data
+  backup including KOA, scp, and rsync are found at:
+  <a href="http://www2.keck.hawaii.edu/inst/common/BackingUp.html">BackingUp</a>.
+
+
+
+  <dt><br><b><a name="news3">MOSFIRE DRP updated</b>
+(2014-Mar-7)
+
+   Dr. Nick Konidaris has updated the DRP code to improve
+  maintenance, eradicate some persistent bugs, and address
+  some problems that observers like you have documented either
+  via e-mail or at the the google docs repository
+      <a
+    href="https://groups.google.com/forum/?fromgroups#!forum/mosfire-drp"> forum</a>. 
+
+
+  <p>The updated pipeline may be found at:
+    <a href="http://www.astro.caltech.edu/~npk/mosdrp_releases/">http://www.astro.caltech.edu/~npk/mosdrp_releases/</a>
+
+  <p>Major changes include:
+    <ul>
+      <li> MOSDRP now has a user manual. Please offer
+      suggestions for improvement. 
+      <li> Can combine arclamps and skylines for wavelength
+      calibration at the long end of K. 
+      <li> Uses arclamps for long slit spectra.
+      <li> Fixes issues with integration times and now spits
+      out integration time maps for each reduced output. 
+      <li> Provides standard deviation maps instead of ivar maps
+      <li> Divides the observations into
+      maskname/date/band. It does not attempt to combine
+      observations across multiple nights and now does not
+      have the attendant bugs with this step. 
+      <li> Uses *Ureka* Python instead of STScI Python. Python
+      is now easy to install on Mac and linux (perhaps on
+      windows too but I haven't tested it). 
+      <li> Uses .tar.gz files that are tagged by date, this
+      cleans up the versioning of the pipeline and doesn't
+      require users install Mercurial anymore. 
+</ul>
+
+  <dt><br><b>Flat Lamps Updated</b>
+(2014-Feb-13)
+
+   New flatfielding lamps installed atop the HIRES and AO
+  enclosures in Keck&nbsp;I replace the previous MOSFIRE dome lamp
+  attached to the Nasmyth Deck. The old flat lamp restricted
+  telescope access by Keck personnel. With the new lamps in use,
+  the telescope no longer needs to be set to an azimuth of 7&deg;;
+  instead, the telescope and dome only need to be 90&deg; away
+  from each other.  The MOSFIRE calibration GUI is now updated to
+  use the new lamp, and includes revised default exposure
+  times. Spectrophotometric observers using extra-wide slits will
+  find that the standard exposure times on the calibration GUI
+  (which are intended for typical 0.7&nbsp;arcsec slits) will
+  saturate the detector.  Instead, observers with wide slits
+  should acquire their calibrations manually (i.e., not using the
+  Calibration GUI) and should use the new Domelamp Control GUI to
+  reduce the power level of the lamp.  With low-power (i.e., high
+  attenuation) settings, spectrophotometric observers can obtain
+  flats with the lamps on and better illuminate the spectra at all
+  wavelengths. Click the image below to see the full-sized flat
+  lamp gui.
+
+<br>
+<img src="./images/flatlampgui.jpg"
+  width="99"
+  height="49"
+  onclick="zoomToggle('99px','49px','396px','195px',this);">
+<br>
+
+To launch the new GUI via the MOSFIRE workspace menu,
+right-click on the background and select
+
+<pre>	K1 Telescope Status Menu &gt; NEW Dome Lamp Control GUI</pre>
+
+
+  <dt><br><b>New Observing Mode Gui</b>
+(2014-Feb-5)
+
+   The Observing Mode GUI was updated with a new layout. The
+  new version removes unnecessary options and adds new methods
+  for configuring to a dark filter. The new "quick dark"
+  option efficiently moves the filter wheel to the nearest
+  filter wheel combination to create a dark. Click on the
+  image below to see the full-size version of the new
+  ObsModeGui.
+
+      <p>          <img src="./images/obsmode_gui.jpg"
+                            width="63"
+                            height="128"
+                            onclick="zoomToggle('63px','128px','274px','511px',this);">
+      
+
+  <dt><br><b>MOSFIRE DRP</b>
+(2013-Dec-16)
+
+   Keck has revised instructions for installing the DRP in
+  conjunction with the newly releases <a href="http://ssb.stsci.edu/ureka/">Ureka</a> Python package
+  supported by Gemini and STSCI. Please see: <a
+    href="http://www2.keck.hawaii.edu/inst/mosfire/drp_install.html"> Keck DRP install instructions</a> for the procedure. The official DRP code repository resides at <a href="http://code.google.com/p/mosfire ."> http://code.google.com/p/mosfire</a>
+
+  <dt><br><b>PIG Unleashed</b>
+(2013-Dec-04)
+
+   We have added the new <a
+  href="../common/pig.html">Program Interface
+  GUI (PIG) widget</a> to the MOSFIRE user interface.  On split nights,
+  observers use the PIG to indicate which observing program to
+  associate with the current image.  This permits the <a
+  href="http://www2.keck.hawaii.edu/koa/public/koa.php">Keck
+  Observatory Archive (KOA)</a> to tag the images with the
+  appropriate observing program and observer list, and ensures
+  that the images are assigned the correct proprietary period.
+
+
+  <dt><br><b><a name="2013dec1">MAGMA coordinate output feature</a></b>
+    (2013 Dec 1)
+
+   A post mortem of a failed slitmask alignment revealed that
+  MAGMA has a feature in the mask center coordinates. Recently
+  a mask was designed with the Declination seconds of arc
+  listed as "60.00" in the mask design output files (mask.xml,
+  starlist, etc.). Although the telescope DCS handled 60.000
+  arcsec the Slitmask Alignment Tool DSS query failed,
+  resulting in a difficult coarse alignment. Please check your
+  coordinate files to ensure proper formatting. Keck staff
+  will update software to check the coordinates (SAT and
+  MAGMA) in the near future.
+
+   
+  <dt><br><b><a name="2013sep29">New MOSFIRE FAQ Page May Answer
+    Your Questions</a></b>
+    (2013 Sep 29)
+
+   We have compiled answers to a number of common MOSFIRE
+questions on the new <a href="faq.html">MOSFIRE FAQ page</a>.
+
+
+  <dt><br><b><a name="scent">'scent' Command Permits Reverse Moves</a></b>
+    (2013 Jun 21)
+
+   The <kbd>scent</kbd> command is used to offset the
+  telescope such that a target at image location (x,y) moves to
+  the slit center.  However, sometimes observers may want to do
+  the opposite operation; i.e., move a target from the slit center
+to a given pixel position.  This is now possible by supplying
+the <kbd>-r</kbd> (reverse) flag when invoking
+<kbd>scent</kbd>.  For example, an observer can place
+a star at pixel (1000,500) as follows:
+<ul>
+
+  <li> Have the OA center the star on the guider at the <kbd>REF</kbd>
+    pointing origin.
+
+  <li> Have the OA send the target to the <kbd>SLIT</kbd>
+    pointing origin.
+
+  <li> Execute the command <pre>	scent -r 1000 500</pre>
+</ul>
+
+This technique is useful for putting a star on a wide (10
+arcsec) slit for spectroscopy.
+
+  <dt><br><b><a name="dp">dp Command Displays Images to ds9</a></b>
+    (2013 May 31)
+
+   The new <kbd>dp</kbd> command allows you to easily display
+MOSFIRE images on the ds9 image display, and will overplot the
+predicted slit positions if the image was a direct image.  The
+syntax is quite flexible:
+
+<ul>
+  <li> <kbd>dp</kbd> alone will display the most recent image
+    on disk
+  <li> <kbd>dp <em>n</em></kbd> will display image <em>n</em>
+    on disk
+  <li> <kbd>dp <em>-n</em></kbd> will display the
+    <em>n</em>-th previous image 
+  <li> <kbd>dp <em>name.fits</em></kbd> will display the 
+    named image.  If a relative pathname is supplied, the
+    image may be in either the current directory or the
+    current data directory.
+</ul>
+
+This command is available on all MOSFIRE accounts when logged
+into the MOSFIRE host computer, nuu.
+
+  <dt><br><b><a name="news3">Guider Communication Compromized</a></b>
+    (2013 April 24 )
+
+    The fiber optic cable on MOSFIRE's interconnect panel was
+  damaged in the morning of 22 April. Fiber cables are used to
+  communicate to the instrument and guider with the guider
+  requiring two sets of fibers. The guider fibers were damaged
+  preventing communication with the guider. All other
+  instrument control behaved normally. After much
+  troubleshooting the guider is in a usable state after
+  troubleshooting the issue for two days. We now have full
+  control over the guider detector but we have to manually
+  focus the guider during the night. This will cause some
+  minor delays at the beginning of the night. We plan to
+  resolve the issue after MOSFIRE come off sky in early May.
+
+
+  <dt><br><b><a name="news2">Calibration Tool Updates</a></b>
+    (2013 April 5 )
+
+    The GUI and scripts used to automate calibration acquisitions for
+  user designed slitmasks was updated and released for
+  observer use. The new GUI (seen below) presents a couple of
+  new options to the observer by giving them options for
+  changing arc-lamp exposure times and acquiring a flat lamp off
+  image of the dome. Default values for exposure times and
+  quantities were updated.  The acquisition script is much
+  more intelligent and now ensures that masks properly execute, skips masks if no
+  exposures are requested, and is in general, more robust to
+  errors in mechanism moves. Like DEIMOS and LRIS observers,
+  MOSFIRE observers should be able to setup their calibration
+  sequence in the afternoon, initiate the script, and safely
+  grab dinner.
+      <p>          <img src="./images/CalTool.jpg"
+                            width="225"
+                            height="275"
+                            onclick="zoomToggle('225px','275px','450px','550px',this);">
+
+  <dt><br><b><a name="news1">CSU Fatal Error Avoidance Strategies II: The New Voodoo</a></b>
+    (2013 Feb 10 )
+
+    The configurable slitmask unit (CSU) has been experiencing
+   &ldquo;Fatal Errors&rdquo; when reconfiguring to new
+   masks. This can occur when you are changing fields or when you
+   are reconfiguring from an alignment to a science mask. There
+   are new strategies to avoid a fatal error. First, all
+afternoon calibrations are should be acquired with the instrument at a PA
+   of -90&deg;. Second, before changing masks,
+   ensure that the drive angle on <a
+   href="../common/facsum.html">FACSUM</a> is at least 30&deg;
+from zero. If the drive angle is within 10&deg; of zero or
+  -180, please ask the
+   OA to rotate MOSFIRE 30&deg; from the present location and
+   then initiate your mask move. Note that the drive angle is
+   likely different than the current PA of MOSFIRE. Both angles
+   are located in the bottom right on <a
+   href="../common/facsum.html">FACSUM</a>.
+
+
+   <dt><br><b>TRUITIME vs ITIME</b>
+    (2013 Jan 30 )
+    Observers who require knowing the exposure time to a high
+  precision should note that there are two FITS header
+  keywords that specify the exposure time. 
+         <ul>
+    <li> TRUITIME - this is the true exposure time and has
+      units of seconds. This exposure time is within one read
+      time of the ITIME value below.
+      <li> ITIME - This is the exposure time as it was
+      specified in the gui or on the command line using tint.
+        </ul>
+
+   <dt><br><b>CSU Fatal Error Avoidance Strategies </b>
+    (2012 Nov 15 )
+    The configurable slitmask unit (CSU) has been experiencing
+  "Fatal Errors" when reconfiguring to new masks. This can
+  occur when you are changing fields or when you are
+  reconfiguring from an alignment to a science mask. There are
+  two strategies for observing that may mitigate the CSU
+  errors that are recommended by the MOSFIRE team.These two
+  strategies apply when there are significant rotator or
+  telescope moves.
+<ul> 
+  <li> First method developed by Ian McLean (UCLA)
+    <ol>
+      <li> Put the dark filter in beam.
+      <li> Slew to the new field.
+      <li> Power cycle the CSU (your SA can instruct you).
+      <li> Send the mask setup.
+      <li> Execute the mask.
+    </ol>
+  <li> Second method employed by Chuck Steidel (Caltech)
+    <ol>
+      <li> Put the dark filter in beam.
+      <li> Slew to the new field.
+      <li> While slewing send the mask setup.
+          <li> Re-send the mask setup, when telescope is in
+    position and guiding.
+          <li> Execute the mask. 
+    </ol>
+</ul>
+      
+  <p> In addition to the night time observing strategies
+    above, we also recommend power cycling the CSU just before
+    starting your calibrations in the afternoon.
+
+   <p> New recovery software has
+    reduced the lost time to 20-25 min.most of the
+    time. Less frequently, fatal errors may result in up
+    to 1.5 hours of lost time. 
+
+
+   <dt><br><b>MAGMA - slitmask design software released</b>
+    (2012 Aug 7 )
+    MAGMA is the software used to design slitmask for
+  MOSFIRE. Version 1.0 was released today and may be down
+  loaded for use following the links at <a href="./magma.html">
+    MAGMA </a>. A version of the software is available for
+    MAC, Linux, Solaris, and Windows. We are still shaking out
+    a few bugs, so if you observe an issue, please contact Marc
+    Kassis. 
+
+   <dt><br><b>MOSFIRE scheduled for 2012B</b>
+    (2012 June )
+   MOSFIRE is scheduled for regular use starting in
+  2012B, and all commissioning efforts are expected to be
+  completed before the first night of observing in
+  September. For observers, who are scheduled to use MOSFIRE
+  in 2012B, you will need to prepare slitmask design files in
+  advance of your run. The new slitmask design software is
+  called MAGMA and will be released in early August. Please
+  see the MOSFIRE observatory <a
+href="http://www2.keck.hawaii.edu/inst/newsletters/Vol13/index.html#mosfire">
+newsletter article</a> for first light details.
+
+
+   <dt><br><b>MOSFIRE First Light</b>
+    (2012 April 4)
+     MOSFIRE first light images were
+  acquired on the night of April 4, despite heavy circus
+  clouds over Mauna kea. Images and spectra were acquired on
+  the night of the 5 as part of the continuing commissioning
+  of the instrument. Please check the web pages for
+  information on the performance of the instrument. The
+  observatory press release may be found at <a
+    href="http://www.keckobservatory.org/news/first_light_mosfire">
+    observatory news</a>
+
+  <dt><br><b>MOSFIRE moved to RT1</b>
+    (2012 Feb 22)
+    After complete unpacking from the shipping crate, MOSFIRE
+  was lifted to the RT1 position on the Keck I telescope
+  Nasmyth Deck next to LRIS. 
+     <p> <img  border="2" src="./images/mosfire_rt1.jpg"> 
+  <dt><br><b>MOSFIRE arrives at Keck!</b>
+    (2012 Feb 16)
+    MOSFIRE arrived safely at the Keck Observatory early
+  afternoon on 16 February 2012 after traveling by boat from
+  the mainland. MOSFIRE was uncrated and placed inside the
+  dome for unpacking.
+     <p> <img  border="2" src="./images/mosfire_arriving_in_k1.jpg"> 

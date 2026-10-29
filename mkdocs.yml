@@ -17,7 +17,7 @@ plugins:
 nav:
   - "MOSFIRE Home": index.md
   - "MOSFIRE Info":
-    - "MOSFIRE News/Status": status.md
+    - "MOSFIRE News": news.md
     - "Specifications":
       - "Filters": filters.md
       - "Grating": grating.md
@@ -83,7 +83,8 @@ nav:
       - "Retrieve Data using PyKOA": https://koa.ipac.caltech.edu/UserGuide/PyKOA/TAPClients.html#pykoa
       - "Data Proprietary Period": http://www2.keck.hawaii.edu/realpublic/koa/public/KOA_data_policy.pdf
     - "MOSFIRE Data Reduction":
-        - "PypeIt": https://pypeit.readthedocs.io/en/stable/spectrographs/mosfire.html
+        - "PypeIt (spectroscopy)": https://pypeit.readthedocs.io/en/stable/spectrographs/mosfire.html
+        - "POTPyRI (imaging)": https://github.com/CIERA-Transients/POTPyRI
         - "MOSFIRE DRP (not supported)": https://keck-datareductionpipelines.github.io/MosfireDRP/
         - "IRAF & MOSDIFF": mosdiff.md
     - "Acknowledging Keck": https://www2.keck.hawaii.edu/observing/keck_authors.html
