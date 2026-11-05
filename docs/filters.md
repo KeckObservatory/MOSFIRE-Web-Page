@@ -2,7 +2,7 @@
 
 s## Order Sorting Filters
 
-| Name | Transmission Curve | &lambda;<sub>C</sub> (&mu;m) | FWHM (&mu;m) | Notes |
+| Name | Transmission Curve | &lambda;c (&mu;m) | FWHM (&mu;m) | Notes |
 | ---- | ------------------ | ---------------------------- | ------------ | ----- |
 | Y    | [Plot](figures/Y_band.jpg), [ASCII](figures/mosfire_Y.txt)  | 1.048 | 0.152 | |
 | J    | [Plot](figures/J_band.jpg), [ASCII](figures/mosfire_J.txt)  | 1.253 | 0.200 | J2 covers a region that J does not. |
@@ -12,7 +12,7 @@ s## Order Sorting Filters
 
 ## Intermediate Band Filters
 
-| Name | Transmission Curve | &lambda;<sub>C</sub> (&mu;m) | FWHM (&mu;m) | Notes |
+| Name | Transmission Curve | &lambda;c (&mu;m) | FWHM (&mu;m) | Notes |
 | ---- | ------------------ | ---------------------------- | ------------ | ----- |
 | J2   | [Plot](figures/J2.jpg), [ASCII](figures/J2_center_corr.txt) | 1.181 | 0.129 | |
 | J3   | [Plot](figures/J3.jpg), [ASCII](figures/J3_center_corr.txt) | 1.288 | 0.122 | |
@@ -24,5 +24,5 @@ s## Order Sorting Filters
 ![Broadband Filter Curves](figures/filters_broadband.jpg)
 > Image showing the broadband filter curves.
 
-![<# alt text #>](figures/JHmed.jpg "JHmed.jpg")
+![<# alt text #>](figures/JHmed.jpg)
 > Image showing the transmission curves of the J2,J3,H1, & H2 filters relative to the order sorting filters. 
