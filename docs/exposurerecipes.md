@@ -12,12 +12,12 @@ Accounting for the brightness of the OH lines in each atmospheric band, we recom
 
 Please note that the background numbers all assume MCDS16 sampling mode and the default 0.7” slits; please scale accordingly if you are using non-standard slit width.
 
-| Filter | ExpTime | Overhead | Observing Efficiency | Sky Noise | Total Noise |
-| ------ | ------- | -------- | -------------------- | --------- | ----------- |
-| Y      | 180 s   | 23.3 s   | 89%                  | 7.8 e-    | 9.7 e-      |
-| J      | 120 s   | 23.3 s   | 84%                  | 6.0 e-    | 8.3 e-      |
-| H      | 120 s   | 23.3 s   | 84%                  | 8.3 e-    | 10.1 e-     |
-| K      | 180 s   | 23.3 s   | 89%                  | 8.4 e-    | 10.2 e-     |
+| Filter | ExpTime<br>(s) | Overhead<br>(s) | Observing Efficiency | Sky Noise<br>(e-) | Total Noise<br>(e-) |
+| ------ | ------- | -------- | ------------------ | ------- | --------- |
+| Y      | 180     | 23.3     | 89%                | 7.8     | 9.7       |
+| J      | 120     | 23.3     | 84%                | 6.0     | 8.3       |
+| H      | 120     | 23.3     | 84%                | 8.3     | 10.1      |
+| K      | 180     | 23.3     | 89%                | 8.4     | 10.2      |
 
 Thus, for example, one might request a “mask nod” sequence of 10 repeats of a 2-position dither pattern in K (meaning a total of 20×180 s exposures, comprised of 10 exposures at position A and 10 at position B). This sequence would require 20×(180+23.3)=4066 s for MCDS16 mode, not including the time for offsetting the telescope (roughly 3-4 seconds per dither). The clock time would then be approximately 4150 s for 3600 s of integration on source. 
 
@@ -25,9 +25,8 @@ Thus, for example, one might request a “mask nod” sequence of 10 repeats of 
 
 Use these exposure times for on-sky observations of targets fainter than the night sky.  
 
-| Filter | ExpTime | Sky Level | Sky Brightness | Sky Brightness | Sky Brightness |
+| Filter | ExpTime<br>(s) | Sky Level<br>(ADU/pix) | Sky Brightness<br>(e-/pix/s) | Sky Brightness<br>(Vega mag/arcsec^2) | Sky Brightness<br>(AB mag/arcsec^2) |
 | ------ | ------- | --------- | -------------- | -------------- | -------------- |
-|        | (s)     | (ADU/pix) | (e-/pix/s)     | (Vega mag/arcsec^2) | (AB mag/arcsec^2) |
 | Y      | 30      | 5,600     | 730-820        | 17.44          | 18.09 |
 | J      | 10.2    | 11,700    | 950-1350       | 15.78          | 16.58 |
 | H      | 2.9     | 13,600    | 4160-5570      | 13.74          | 15.14 |
@@ -41,12 +40,12 @@ Use these exposure times for on-sky observations of targets fainter than the nig
 
 Use the exposure times listed below to obtain well-exposed images with the MOSFIRE spectral lamp on Keck I. The goal is to achieve a peak illimination of about 13,000 DN/px, which remains well within the regime in which the detector response is linear to within 1%. Note that the exposure times listed below apply to 0.7 arcsec slits; to derive appropriate values for other slit widths, please scale the listed exposure times inversely by slit width. 
 
-| Filter | ExpTime | Actual ExpTime | Lamp Power Level | Count Rate     | Peak Counts |
-| ------ | ------- | -------------- | ---------------- | -------------- | ----------- |
-| Y      | 17 s    | 16.004 s       | 4                | 800 ADU/pix/s  | 12000-13000 |
-| J      | 11 s    | 10.184 s       | 9                | 1200 ADU/pix/s | 12000-13000 |
-| H      | 11 s    | 10.184 s       | 13.5             | 1200 ADU/pix/s | 12000-13000 |
-| K      | 11 s    | 10.184 s       | 14               | 1200 ADU/pix/s | 12000-13000 |
+| Filter | ExpTime<br>(s) | Actual ExpTime<br>(s) | Lamp Power Level | Count Rate<br>(ADU/pix/s) | Peak Counts<br>(ADU) |
+| ------ | ------ | ------------- | ---------------- | ----- | ----------- |
+| Y      | 17     | 16.004        | 4                | 800   | 12000-13000 |
+| J      | 11     | 10.184        | 9                | 1200  | 12000-13000 |
+| H      | 11     | 10.184        | 13.5             | 1200  | 12000-13000 |
+| K      | 11     | 10.184        | 14               | 1200  | 12000-13000 |
 
 Notes
 - Exptime: Value you should enter into the MOSFIRE exposure control GUI.
@@ -61,7 +60,7 @@ Notes
 
 For a 15 arcsecond wide slit, use the exposure times listed below to obtain well-exposed data with the MOSFIRE spectral lamp on Keck I when using wide slits. This is a manual procedure. The goal is to achieve a peak illimination of about 13,000 DN/px, which remains well within the regime in which the detector response is linear to within 1%. 
 
-| Filter | ExpTime | Actual ExpTime | Lamp Power Level | Count Rate     | Peak Counts |
+| Filter | ExpTime<br>(s) | Actual ExpTime<br>(s) | Lamp Power Level | Count Rate<br>(ADU/pix/s) | Peak Counts<br>(ADU) |
 | ------ | ------- | -------------- | ---------------- | -------------- | ----------- |
 | K      | 2 s     | 1.455 s        | 17.5             | 6900           | 10000-11000 | 
 
@@ -79,12 +78,12 @@ For a 15 arcsecond wide slit, use the exposure times listed below to obtain well
 
 Use these exposure times to obtain well-exposed images with the Dome Lamps (new), the same lamps used for spectroscopy. The goal is to achieve a peak illimination of less than 18,000 DN/px, which remains well within the regime in which the detector response is linear to within 1%. 
 
-| Filter | ExpTime | Actual ExpTime | Lamp Power Level | Count Rate     | Peak Counts |
-| ------ | ------- | -------------- | ---------------- | -------------- | ----------- |
-| Y      | 6 s     | 5.8 s          | 20               | 2400 ADU/pix/s | 14000 |
-| J      | 15 s    | 14.3 s         | 19.5             | 900 ADU/pix/s  | 15000 |
-| H      | 6 s     | 5.8 s          | 20               | 2300 ADU/pix/s | 13500 |
-| Ks     | 2 s     | 1.455 s        | off              | 5500 ADU/pix/s | 8000  |
+| Filter | ExpTime<br>(s) | Actual ExpTime<br>(s) | Lamp Power Level | Count Rate<br>(ADU/pix/s) | Peak Counts<br>(ADU) |
+| ------ | ------ | ------------- | ---------------- | ----- | ----- |
+| Y      | 6      | 5.8           | 20               | 2400  | 14000 |
+| J      | 15     | 14.3          | 19.5             | 900   | 15000 |
+| H      | 6      | 5.8           | 20               | 2300  | 13500 |
+| Ks     | 2      | 1.455         | off              | 5500  | 8000  |
 
 Please note that the dome flat lamp brightness varies and the J- and H-band imaging flats may saturate. If this happens, we recommend taking twilight flats instead. For twilight flats, we can use the box9 command in a mosfire server terminal to take flat images with 9-point dithering.
 
@@ -92,13 +91,13 @@ Please note that the dome flat lamp brightness varies and the J- and H-band imag
 
 Spectral type A0V stars are typically preferred for calibrating IR spectra because they have a minimum of instrinsic lines in their spectra. A handy list of such stars suitable for observing with MOSFIRE appears below. The recommended exposure times were scaled from the values determined for 20s exposures acquired during commissioning. 
 
-| Target    | V mag | Filter | ExpTime | Continuum Count Rate | OH Peak Count Rate |
-| --------- | ----- | ------ | ------- | -------------------- | ------------------ |
-| HD 22859  | 7.80  | Y      | 10 s    | 575 ADU/pix/s        | 575 ADU/pix/s      |
-|           |       | J      | 10 s    | 550 ADU/pix/s        | 575 ADU/pix/s      |
-|           |       | H      | 2 s     | 1550 ADU/pix/s       | 1750 ADU/pix/s     |
-|           |       | K      | 10 s    | 700 ADU/pix/s        | 750 ADU/pix/s      |
-| HD 199006 | 9.10  | H      | 10 s    | 425 ADU/pix/s        | 700 ADU/pix/s      |
+| Target    | V mag | Filter | ExpTime<br>(s) | Continuum Rate<br>(ADU/pix/s) | OH Peak Rate<br>(ADU/pix/s) |
+| --------- | ----- | ------ | ------ | ----------- | ------ |
+| HD 22859  | 7.80  | Y      | 10     | 575         | 575    |
+|           |       | J      | 10     | 550         | 575    |
+|           |       | H      | 2      | 1550        | 1750   |
+|           |       | K      | 10     | 700         | 750    |
+| HD 199006 | 9.10  | H      | 10     | 425         | 700    |
 
 Notes:
 
