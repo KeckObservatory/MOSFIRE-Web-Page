@@ -34,7 +34,7 @@ nav:
     - "Exposure Time Calculator": etc.md
     - "Exposure Recommendations": exposurerecipes.md
     - "Mask Design: MAGMA": magma.md
-    - "Mask Design: Strategies": maskdesign.md
+    - "Mask Design FAQ": maskdesign.md
     - "Dither Patterns": ditherpatterns.md
     - "Position Angles": positionangles.md
     - "Standard Stars":
