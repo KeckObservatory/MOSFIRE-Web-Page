@@ -38,7 +38,7 @@ nav:
     - "Dither Patterns": ditherpatterns.md
     - "Position Angles": positionangles.md
     - "Standard Stars":
-      - "Persson JHK Standards": https://ui.adsabs.harvard.edu/abs/1998AJ....116.2475P/abstract
+      - "Persson JHK Standards": standards_persson.md
       - "Elias JHKL Standards": standards_elias.md
       - "UKIRT Standards": standards_ukirt.md
       - "MSSSO Standards": standards_mssso.md
