@@ -38,8 +38,13 @@ nav:
     - "Dither Patterns": ditherpatterns.md
     - "Position Angles": positionangles.md
     - "Standard Stars":
-      - "IR Photometric Standards": standards.md
+      - "Persson JHK Standards": https://ui.adsabs.harvard.edu/abs/1998AJ....116.2475P/abstract
+      - "Elias JHKL Standards": standards_elias.md
+      - "UKIRT Standards": standards_ukirt.md
+      - "MSSSO Standards": standards_mssso.md
+      - "IRTF Standards": standards_irtf.md
       - "Gemini Telluric Standards": http://www.gemini.edu/sciops/instruments/nearir-resources?q=node/10175
+      - "Extinction": extinction.md
   - "Observing with MOSFIRE":
     - "Afternoon Setup": afternoon.md
     - "Calibration Recipes": calrecipes.md
