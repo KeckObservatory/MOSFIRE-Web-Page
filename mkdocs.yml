@@ -49,7 +49,7 @@ nav:
     - "Afternoon Setup": afternoon.md
     - "Calibration Recipes": calrecipes.md
     - "Evening Startup": evening.md
-    - "Observing Quick Guide": quickguide.md
+    - "Observing Quick Guide": figures/MOSFIRE_quick_guide.pdf
     - "Observing Workflow": workflow.md
     - "Mask Alignment":
       - "Slitmask Alignment": maskalignment.md
